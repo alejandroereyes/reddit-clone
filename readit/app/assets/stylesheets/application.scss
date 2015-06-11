@@ -5,3 +5,18 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$header-color: #CCCC99;
+
+$font: Courier;
+
+header {
+  background-color: $header-color;
+  height: 100px;
+  text-align: center;
+  font-family: $font;
+  font-size: 50px;
+  padding-top: 10px;
+  letter-spacing: 4px;
+
+}

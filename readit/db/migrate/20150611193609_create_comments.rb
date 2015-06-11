@@ -1,5 +1,4 @@
 class CreateComments < ActiveRecord::Migration
-  has_many :votes
   def change
     create_table :comments do |t|
       t.text :body, null: false

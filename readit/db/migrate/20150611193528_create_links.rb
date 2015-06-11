@@ -1,6 +1,4 @@
 class CreateLinks < ActiveRecord::Migration
-  has_many :votes
-  has_many :comments
   def change
     create_table :links do |t|
       t.text :post

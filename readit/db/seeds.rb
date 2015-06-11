@@ -12,7 +12,7 @@
 
   board = Board.create(category: Faker::Lorem.word)
 
-  link = Link.create(post: Faker::Lorem.words, title: Faker::Lorem.word, user_id: user.id, board_id: board.id)
+  link = Link.create(post: Faker::Lorem.paragraph, title: Faker::Lorem.word, user_id: user.id, board_id: board.id)
 
   comment = Comment.create(body: Faker::Lorem.words, link_id: link.id, user_id: user.id)
 

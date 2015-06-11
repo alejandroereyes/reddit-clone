@@ -7,16 +7,21 @@
 @import "bootstrap";
 
 $header-color: #CCCC99;
+$link-color: #003366;
 
 $font: Courier;
 
 header {
   background-color: $header-color;
-  height: 100px;
+  height: 110px;
   text-align: center;
   font-family: $font;
   font-size: 50px;
-  padding-top: 10px;
+  padding-top: 20px;
   letter-spacing: 4px;
+  margin-top: 45px;
+}
 
+.title-link {
+  color: $link-color;
 }

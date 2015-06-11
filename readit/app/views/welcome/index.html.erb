@@ -1,0 +1,17 @@
+<article>
+
+    <div class="one_link">
+    <% @links.each do |link| %>
+
+    <div>
+      <%= link_to link.title.titleize, "links/#{link.id}", class: "title-link" %>
+    </div>
+
+    <div>
+      <%= link.post %>
+    </div>
+    <% end %>
+
+    </div>
+
+</article>

@@ -19,12 +19,12 @@
     <![endif]-->
   </head>
   <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top"><div class="mini-logo"><a href="/"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a></div>
   <div class="container">
     ...
   </div>
 </nav>
-  <header><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Readit</header>
+  <header><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><%= link_to 'readit', '/', class: 'header' %> </header>
   <%= yield %>
 
 </body>

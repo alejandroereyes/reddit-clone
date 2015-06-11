@@ -8,8 +8,24 @@
 
 $header-color: #CCCC99;
 $link-color: #003366;
+$header-name-color: #333333;
 
 $font: Courier;
+
+nav {
+  padding-left: 20px;
+  padding-top: 5px;
+
+  .mini-logo {
+
+    height: 20px;
+
+    .glyphicon-glyphicon-eye-open {
+      color: $header-name-color;
+      height: 40px;
+    }
+  }
+}
 
 header {
   background-color: $header-color;
@@ -20,8 +36,13 @@ header {
   padding-top: 20px;
   letter-spacing: 4px;
   margin-top: 45px;
+  text-decoration: none;
 }
 
 .title-link {
   color: $link-color;
+}
+
+.header {
+  color: $header-name-color;
 }

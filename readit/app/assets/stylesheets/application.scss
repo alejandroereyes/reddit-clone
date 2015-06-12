@@ -12,9 +12,14 @@ $header-name-color: #333333;
 
 $font: Courier;
 
+
 nav {
   padding-left: 20px;
   padding-top: 5px;
+
+ .container {
+    margin-left: 5px;
+    margin-right: 5px;
 
   .mini-logo {
 
@@ -27,11 +32,7 @@ nav {
   }
   a {
     color: $header-name-color;
-
-    .glyphicon-glyphicon-eye-open {
-      color: $header-name-color;
-      height: 40px;
-    }
+  }
   }
 }
 
@@ -45,6 +46,10 @@ header {
   letter-spacing: 4px;
   margin-top: 45px;
   text-decoration: none;
+
+  a.glyphicon-glyphicon-eye-open {
+      color: $header-name-color;
+    }
 }
 
 .title-link {

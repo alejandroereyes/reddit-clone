@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :boards
 
+  # get 'links/users/:id', to: 'users/show'
   resources :links
 
   resources :comments

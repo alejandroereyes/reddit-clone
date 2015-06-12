@@ -1,0 +1,7 @@
+<div class="new-link">
+
+<% form_for(@link) do |f| %>
+  <p> Title: <%= f.text_field :title, placeholder: "Title" %></p>
+  <p> Link: <%= f.text_field :post, placeholder: "Great Link!" %></p>
+  <p> User: <%= f.select_tag :user_id, [@link.user.name, @link.user_id] </p>
+</div>

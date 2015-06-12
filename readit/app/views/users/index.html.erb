@@ -1,7 +1,7 @@
 <article>
   <div class="one-object">
     <% @users.each do |user| %>
-      <%= user.name %><br>
+      <%= link_to user.name, "user/#{user.id}" %><br>
       <%= user.email %><br>
       <%= user.password_digest %><br>
       ----------------<br>

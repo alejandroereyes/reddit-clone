@@ -1,0 +1,10 @@
+<article>
+  <div class="one-object">
+    <% @users.each do |user| %>
+      <%= user.name %><br>
+      <%= user.email %><br>
+      <%= user.password_digest %><br>
+      ----------------<br>
+    <% end %>
+  </div>
+</article>

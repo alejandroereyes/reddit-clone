@@ -25,6 +25,14 @@ nav {
       height: 40px;
     }
   }
+  a {
+    color: $header-name-color;
+
+    .glyphicon-glyphicon-eye-open {
+      color: $header-name-color;
+      height: 40px;
+    }
+  }
 }
 
 header {
@@ -46,3 +54,13 @@ header {
 .header {
   color: $header-name-color;
 }
+
+article {
+  padding: 15px;
+
+}
+
+div.one-link {
+  margin-bottom: 10px;
+}
+

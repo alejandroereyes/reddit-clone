@@ -1,8 +1,8 @@
 <div class="vote-btns">
   <p>
-    <%= button_to 'Upvote', (@vote), method: :post, class: "v-btn" %>
+    <%= button_to 'Upvote', (votes_upvote_path), method: :post, class: "v-btn" %>
   </p>
   <p>
-    <%= button_to 'Downvote', (@vote), method: :post, class: "v-btn" %>
+    <%= button_to 'Downvote', (votes_downvote_path), method: :post, class: "v-btn" %>
   </p>
 </div>

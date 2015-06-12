@@ -1,5 +1,6 @@
 class VotesController < ApplicationController
-  def update
+
+  def upvote
 
   end
 end

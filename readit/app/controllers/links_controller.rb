@@ -5,6 +5,7 @@ class LinksController < ApplicationController
   end
 
   def new
+    authenticate_user!
     @link = Link.new
   end
 

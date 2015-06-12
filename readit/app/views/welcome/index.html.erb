@@ -10,6 +10,14 @@
     <div>
       <%= link.post %>
     </div>
+
+    <div>
+      <%= link.post %>
+    </div>
+    <div class="vote-btns">
+     <p><%= button_to 'Upvote', (@vote), method: :post, class: "v-btn" %></p>
+     <p><%= button_to 'Downvote', (@vote), method: :post, class: "v-btn" %></p>
+    </div>
     <% end %>
 
     </div>

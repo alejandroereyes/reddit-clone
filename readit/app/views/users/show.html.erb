@@ -1,0 +1,10 @@
+<article>
+  <div class="user-profile">
+
+    <%= @user.name %>
+    <%= @user.email %>
+    <% @user.links.each do |user| %>
+      <%= user.title %>
+    <% end %>
+  </div>
+</article>

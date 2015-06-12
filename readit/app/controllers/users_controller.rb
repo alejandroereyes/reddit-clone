@@ -5,8 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:id])
-    render json: params
+    @user = User.find(params[:id])
   end
 
   private

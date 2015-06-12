@@ -33,6 +33,7 @@
     <a href="/logout" class="log-out>">
       <button type="button" class="btn btn-default navbar-btn">Log Out</button>
     </a>
+    <%= link_to "Hello #{current_user.name}", "users/#{current_user.id}" if current_user %>
     <!-- <a href="/users/new" class="new_user>">Sign Up</a> -->
   </div>
 </nav>

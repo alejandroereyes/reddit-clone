@@ -6,14 +6,10 @@
 
   <%= f.text_area :post, placeholder: "Your cool link" %>
 
-  <%= f.select(:board_id) do %>
-
-    <% @link.board_id.
-
-  <% end %>
-
   <%= f.submit %>
 
 <% end %>
+
+<%= @board.category_arr.inspect %>
 
 </div>

@@ -7,6 +7,7 @@ class LinksController < ApplicationController
   def new
     authenticate_user!
     @link = Link.new
+    @board = Board.all
   end
 
   def create

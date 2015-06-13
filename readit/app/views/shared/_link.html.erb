@@ -1,4 +1,5 @@
-
-<%= link.title %>
-
-<%= link.post %>
+<% if link.post.to_s.match(/^http:|^ http|^url|^www./)%>
+  <%= link_to link.post, "#{link.post}" %>
+<% else %>
+  <%= link.post %>
+<% end %>

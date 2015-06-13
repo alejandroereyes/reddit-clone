@@ -4,6 +4,7 @@ class LinksController < ApplicationController
     @link = Link.find(params[:id])
     @all_comments = Comment.all.where(link_id: params[:id])
     @comment = Comment.new
+    @vote = Vote.find_by(link_id: params[:id])
   end
 
   def new

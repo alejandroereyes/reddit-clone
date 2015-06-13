@@ -8,6 +8,9 @@
   <div>
     <%= @link.user.name %>
   </div>
+  <div>
+    <%= render partial: "shared/vote_btns", locals: { link: @link, vote: @vote } %>
+  </div>
 </div>
 <div class="comments-box">
   <h5>Comments (<%= @all_comments.count %>)</h5>

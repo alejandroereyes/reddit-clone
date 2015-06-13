@@ -2,9 +2,15 @@
 
 <%= form_for(@link) do |f| %>
 
-  <%= f.text_field :title %>
+  <%= f.text_field :title, placeholder: "Title this Link" %>
 
-  <%= f.text_area :post %>
+  <%= f.text_area :post, placeholder: "Your cool link" %>
+
+  <%= f.select(:board_id) do %>
+
+    <% @link.board_id.
+
+  <% end %>
 
   <%= f.submit %>
 

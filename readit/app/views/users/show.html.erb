@@ -4,7 +4,10 @@
     <%= @user.name %>
     <%= @user.email %>
     <% @user.links.each do |user| %>
-      <%= user.title %>
+      <div class='one-link'>
+        <p><%= user.title.titleize %></p>
+        <p><%= user.post %></p>
+      </div>
     <% end %>
   </div>
 </article>

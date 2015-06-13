@@ -16,7 +16,7 @@
   <h5>Comments (<%= @all_comments.count %>)</h5>
   <% @all_comments.each do |comment| %>
     <%= comment.body %>
-    <%= "Says: #{comment.user.name}" %><br>
+    <%= ",Says #{comment.user.name}" %><br>
   <% end %>
 </div>
 <div class="add-comments-box">

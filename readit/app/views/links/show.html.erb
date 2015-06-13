@@ -7,6 +7,13 @@
 <div>
   <%= @link.user.name %>
 </div>
+<div class="comments-box">
+  <h5>Comments (<%= @all_comments.count %>)</h5>
+  <% @all_comments.each do |comment| %>
+    <%= comment.body %>
+    <%= "Says: #{comment.user.name}" %><br>
+  <% end %>
+</div>
 <div class="add-comments-box">
   <%= form_for(@comment) do |f| %>
     <div class="comment-entry">
@@ -19,6 +26,4 @@
     </div>
   <% end %>
 </div>
-<%= "&&&& #{@comment.inspect} &&&&&" %>
-<%= "*** #{@link.inspect} ***" %>
-<%= "--- #{params} ---" %>
+

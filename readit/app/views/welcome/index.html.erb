@@ -10,6 +10,11 @@
     <div>
       <%= link.post %>
     </div>
+
+    <div>
+      <%= link.user_id.to_i %>
+      <%= link.board_id %>
+    </div>
     <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
     <% end %>
     </div>

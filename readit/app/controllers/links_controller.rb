@@ -16,7 +16,7 @@ class LinksController < ApplicationController
     @link.user_id = session[:user_id]
     @link.board_id = params[:link][:board_id]
     @link.title = params[:link][:title]
-    @link.body = params[:link][:body]
+    @link.post = params[:link][:post]
     if @link.save
       redirect_to @link, notice: "Your link is up!"
     else

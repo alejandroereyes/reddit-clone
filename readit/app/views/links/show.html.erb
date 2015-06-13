@@ -1,11 +1,13 @@
-<div>
-  <%= @link.title %>
-</div>
-<div>
-  <%= render partial: 'shared/link', locals: { link: @link } %>
-</div>
-<div>
-  <%= @link.user.name %>
+<div class'full-link'>
+  <div>
+    <%= @link.title %>
+  </div>
+  <div>
+    <%= render partial: 'shared/link', locals: { link: @link } %>
+  </div>
+  <div>
+    <%= @link.user.name %>
+  </div>
 </div>
 <div class="comments-box">
   <h5>Comments (<%= @all_comments.count %>)</h5>

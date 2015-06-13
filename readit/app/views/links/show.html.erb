@@ -7,3 +7,14 @@
 <div>
   <%= @link.user.name %>
 </div>
+<div class="comments-box">
+  <%= form_for(@comment) do |f| %>
+    <div class="comment-entry">
+      <%= f.label :body, "Comment" %><br>
+      <%= f.text_area :body, placeholder: "Speak your mind", size: "80x10" %>
+    </div>
+    <div class = 'submit-comment'>
+    <%= f.submit %>
+    </div>
+  <% end %>
+</div>

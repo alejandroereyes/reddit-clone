@@ -11,6 +11,7 @@
       <%= render partial: 'shared/link', locals: { link: link } %>
     </div>
     <%= link_to "Via #{link.user.name}", "users/#{link.user_id}" %>
+    <%= link.votes.inspect %>
     <div>
     <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
     <% end %>

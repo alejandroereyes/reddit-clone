@@ -4,5 +4,6 @@ class WelcomeController < ApplicationController
     @links = Link.all
     @vote = Vote.new
     @user = User.all
+    @votes = Vote.all
   end
 end

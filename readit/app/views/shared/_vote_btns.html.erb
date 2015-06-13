@@ -1,8 +1,16 @@
 <div class="vote-btns">
   <p>
-    <%= button_to 'Upvote', (votes_upvote_path), method: :post, class: "v-btn" %>
+    <% if session[:user_id] %>
+      <%= button_to 'Upvote', (votes_upvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
+    <% else %>
+      <%= button_to 'Upvote', (votes_upvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
+    <% end %>
   </p>
   <p>
-    <%= button_to 'Downvote', (votes_downvote_path), method: :post, class: "v-btn" %>
+    <% if session[:user_id] %>
+    <%= button_to 'Downvote', (votes_downvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
+    <% else %>
+      <%= button_to 'Downvote', (votes_downvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
+    <% end %>
   </p>
 </div>

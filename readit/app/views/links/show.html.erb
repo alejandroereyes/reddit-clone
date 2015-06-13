@@ -2,7 +2,7 @@
   <%= @link.title %>
 </div>
 <div>
-  <%= @link.post %>
+  <%= render partial: 'shared/link', locals: { link: @link } %>
 </div>
 <div>
   <%= @link.user.name %>

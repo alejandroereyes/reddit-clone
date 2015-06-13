@@ -8,13 +8,14 @@
     </div>
 
     <div>
-      <%= link.post %>
+      <% current_post = link.post.to_s %>
+      <% if current_post.match(/(^http:|^url|^www.)/)%>
+        <%= link_to link.post, "#{link.post}" %>
+      <% else %>
+        <%= link.post %>
+      <% end %>
     </div>
 
-    <div>
-      <%= link.user_id.to_i %>
-      <%= link.board_id %>
-    </div>
     <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
     <% end %>
     </div>

@@ -2,10 +2,14 @@
   <div class="sign-up">
 
  <%= form_for(@user) do |f| %>
-  <p> Name: <%= f.text_field :name %></p>
-  <p> Email: <%= f.text_field :email %></p>
-  <p> Password: <%= f.password_field :password %></p>
-  <p> Password Confirmation: <%= f.password_field :password_confirmation %></p>
+  <%= label_tag(:name, "Name:") %>
+  <p><%= f.text_field :name %></p>
+  <%= label_tag(:email, "Email:") %>
+  <p><%= f.text_field :email %></p>
+  <%= label_tag(:password, "Password:") %>
+  <p><%= f.password_field :password %></p>
+  <%= label_tag(:password_confirmation, "Confirm Password:") %>
+  <p><%= f.password_field :password_confirmation %></p>
   <%= f.submit "Create User" %>
 <% end %>
   </div>

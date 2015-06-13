@@ -2,6 +2,7 @@ class LinksController < ApplicationController
 
   def show
     @link = Link.find(params[:id])
+    @all_comments = Comment.all.where(link_id: params[:id])
     @comment = Comment.new
   end
 

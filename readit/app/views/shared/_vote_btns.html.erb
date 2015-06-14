@@ -1,5 +1,5 @@
-<%= "#{link.votes[0].upvote}  Yays!" if link.votes[0].upvote %>
-<%= "#{link.votes[0].downvote}  Nays" if link.votes[0].downvote %>
+<%= "#{link.votes[0].upvote}  Yays!" if link.votes[0].upvote != nil %>
+<%= "#{link.votes[0].downvote}  Nays" if link.votes[0].downvote != nil %>
 <div class="vote-btns">
   <p>
     <% if session[:user_id] %>

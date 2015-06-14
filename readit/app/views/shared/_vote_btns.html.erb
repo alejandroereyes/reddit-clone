@@ -1,6 +1,6 @@
 
-<%= link.votes.inspect %>
-<%= link.votes[0].inspect %>
+
+<%= link.votes[0][:upvote].inspect %>
 <div class="vote-btns">
   <p>
     <% if session[:user_id] %>

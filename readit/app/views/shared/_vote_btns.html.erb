@@ -1,6 +1,6 @@
+<%="#{link.votes[0][:upvote]}  Yays!" if link.votes[0][:upvote] %>
+<%="#{link.votes[0][:downvote]}  Nays" if link.votes[0][:downvote] %>
 
-
-<%= link.votes[0][:upvote].inspect %>
 <div class="vote-btns">
   <p>
     <% if session[:user_id] %>

@@ -1,28 +1,27 @@
 <article>
-    <div class="row one-link">
-        <% @links.each do |link| %>
-        <div class="row">
-            <div class"title">
-                <div class="col-sm-1">Title:</div>
-                <div class="col-sm-11">
-                    <%= link_to link.title.titleize, "links/#{link.id}", class: "erb-link" %>
+    <% @links.each do |link| %>
+        <div class="row one-link">
+            <div class="row">
+                <div class"title">
+                    <div class="col-sm-1">Title:</div>
+                    <div class="col-sm-11">
+                        <%= link_to link.title.titleize, "links/#{link.id}", class: "erb-link" %>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-1">Post:</div>
-            <div class="col-sm-11">
-                <%= render partial: 'shared/link', locals: { link: link } %>
+            <div class="row">
+                <div class="col-sm-1">Post:</div>
+                <div class="col-sm-11">
+                    <%= render partial: 'shared/link', locals: { link: link } %>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-1">Via:</div>
-            <div class="col-sm-11">
-                <%= link_to "#{link.user.name}", "users/#{link.user_id}" %>
+            <div class="row">
+                <div class="col-sm-1">Via:</div>
+                <div class="col-sm-11">
+                    <%= link_to "#{link.user.name}", "users/#{link.user_id}" %>
+                </div>
             </div>
+                <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
         </div>
-            <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
-
-        <% end %>
-    </div>
+    <% end %>
 </article>

@@ -20,7 +20,7 @@
   </head>
   <body>
   <nav class="navbar navbar-default navbar-fixed-top"><div class="mini-logo"></div>
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
       <div class="col-md-4 nav-links">
         <a href="/"><span class="glyphicon glyphicon-eye-open top-link" aria-hidden="true"></span></a>
@@ -43,9 +43,13 @@
   </div>
 </nav>
 <div class="row">
-  <header><a href="/"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><%= link_to 'readit', '/', class: 'header' %> </header>
+  <header>
+    <a href="/"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><%= link_to 'readit', '/', class: 'header' %>
+  </header>
 </div>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 <footer></footer>
 </body>
 </html>

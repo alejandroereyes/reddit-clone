@@ -1,5 +1,5 @@
 <% if link.post.to_s.match(/^http:|^ http|^url|^www./)%>
-  <%= link_to link.post, "#{link.post}" %>
+  <%= link_to link.post, "#{link.post}", class: "erb-link" %>
 <% else %>
   <%= link.post %>
 <% end %>

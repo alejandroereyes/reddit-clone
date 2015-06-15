@@ -1,11 +1,11 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.vote-btns {
-  width: 200px;
-  display: inline-block;
 
-  .v-btn {
-    display: inline-block;
-  }
+.col-sm-1 {
+  font-weight: bold;
+}
+
+.votes-area {
+  margin: 10px 0;
 }

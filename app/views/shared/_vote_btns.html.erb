@@ -1,20 +1,30 @@
-<% if link.votes[0] != nil %>
-  <%="#{link.votes[0][:upvote]}  Yays!" if link.votes[0][:upvote] %>
-  <%="#{link.votes[0][:downvote]}  Nays" if link.votes[0][:downvote] %>
-<% end %>
-<div class="vote-btns">
-  <p>
-    <% if session[:user_id] %>
-      <%= button_to 'Yay', (votes_upvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
-    <% else %>
-      <%= button_to 'Yay', (votes_upvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
-    <% end %>
-  </p>
-  <p>
-    <% if session[:user_id] %>
-    <%= button_to 'Nay', (votes_downvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
-    <% else %>
-      <%= button_to 'Nay', (votes_downvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
-    <% end %>
-  </p>
+<div class="votes-area">
+  <div class="row">
+    <div class="col-sm-2">
+      <% if link.votes[0] != nil %>
+        <%="#{link.votes[0][:upvote]}  Yays!" if link.votes[0][:upvote] %>
+    </div>
+    <div class="col-sm-2">
+        <%="#{link.votes[0][:downvote]}  Nays" if link.votes[0][:downvote] %>
+      <% end %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="vote-btns">
+      <div class="col-sm-2">
+        <% if session[:user_id] %>
+          <%= button_to 'Yay', (votes_upvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
+        <% else %>
+          <%= button_to 'Yay', (votes_upvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
+        <% end %>
+      </div>
+      <div class="col-sm-2">
+        <% if session[:user_id] %>
+        <%= button_to 'Nay', (votes_downvote_path(link_id: link.id, user_id: session[:user_id])), method: :post, class: "v-btn" %>
+        <% else %>
+          <%= button_to 'Nay', (votes_downvote_path(link_id: link.id)), method: :post, class: "v-btn" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

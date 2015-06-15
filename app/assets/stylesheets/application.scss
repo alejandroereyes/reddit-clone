@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "welcome";
 
 $header-color: #CCCC99;
 $link-color: #003366;
@@ -12,13 +13,14 @@ a {
 
   &.hover {
   text-decoration: none;
+  color: $link-color;
   }
 }
 
 nav {
   padding-left: 20px;
 
- .container-fluid {
+ .container {
     margin-left: 5px;
     margin-right: 5px;
 
@@ -30,17 +32,25 @@ nav {
 
         .top-link {
           padding: 0 10px;
+
+          &:hover {
+            text-decoration: none;
+            color: $link-color;
+          }
         }
       }
 
       .nav-btns {
       float: right;
       transition: background-color 10s ease;
+
         .btn {
           float: right;
           padding: 3px 8px;
+
           &:hover {
             border-radius: 0;
+            color: $link-color;
 
           }
         }
@@ -63,11 +73,12 @@ header {
   a.glyphicon.glyphicon-eye-open {
       color: $header-name-color;
     }
+  a:hover {
+    text-decoration: none;
+    color: $link-color;
+  }
 }
 
-.row {
-
-}
 .title-link {
 
 }

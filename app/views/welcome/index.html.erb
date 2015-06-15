@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-sm-1">Via:</div>
                 <div class="col-sm-11">
-                    <%= link_to "#{link.user.name}", "users/#{link.user_id}" %><span class="post-time"><%= "Added: #{link.created_at.strftime("%b %-d %Y %I:%M%P")}" %></span>
+                    <%= link_to "#{link.user.name}", "users/#{link.user_id}" %><span class="post-time"><%= "Added on #{link.created_at.strftime("%b %-d %Y %I:%M%P")}" %></span>
                 </div>
             </div>
                 <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>

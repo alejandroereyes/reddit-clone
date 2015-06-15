@@ -5,8 +5,13 @@ $time-color: #888888;
 
 .row.one-link {
   padding: 5px 10px;
-  border: 1px dashed grey;
-  border-radius: 5px;
+  border-radius: 10px;
+  transition-duration: 2s;
+
+  &:hover {
+    border-radius: 10px;
+    background-color: lighten( $time-color, 40% );
+  }
 
   .row {
 

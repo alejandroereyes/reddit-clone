@@ -1,16 +1,34 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$time-color: #888888;
 
-.col-sm-1 {
-  font-weight: bold;
-}
-
-.votes-area {
-  margin: 10px 0;
-  padding: 0 15px;
+.row.one-link {
+  padding: 5px 10px;
+  border: 1px dashed grey;
+  border-radius: 5px;
 
   .row {
-    margin-bottom: 5px;
+
+    .col-sm-1 {
+      font-weight: bold;
+    }
+
+    .col-sm-11 {
+
+      span.post-time {
+        color: $time-color;
+        font-size: 11px;
+        margin-left: 15px;
+      }
+    }
+  }
+  .votes-area {
+    margin: 10px 0 5px 0;
+    padding: 0 15px;
+
+    .row {
+      margin-bottom: 5px;
+    }
   }
 }

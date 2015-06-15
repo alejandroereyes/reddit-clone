@@ -35,10 +35,14 @@ nav {
 
       .nav-btns {
       float: right;
-
+      transition: background-color 10s ease;
         .btn {
           float: right;
           padding: 3px 8px;
+          &:hover {
+            border-radius: 0;
+
+          }
         }
       }
     }

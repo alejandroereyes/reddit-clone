@@ -1,8 +1,3 @@
-/*
- *
- *= require_tree .
- *= require_self
- */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -12,31 +7,41 @@ $header-name-color: #333333;
 
 $font: Courier;
 
-a:hover {
+a {
+  color: $header-name-color;
+
+  &.hover {
   text-decoration: none;
+  }
 }
 
 nav {
   padding-left: 20px;
-  padding-top: 5px;
 
- .container {
+ .container-fluid {
     margin-left: 5px;
     margin-right: 5px;
 
-  .mini-logo {
+    .row {
 
-    height: 20px;
+      .nav-links {
+        padding-top: 17px;
+        float: left;
 
-    .glyphicon-glyphicon-eye-open {
-      color: $header-name-color;
-      height: 40px;
+        .top-link {
+          padding: 0 10px;
+        }
+      }
+
+      .nav-btns {
+      float: right;
+
+        .btn {
+          float: right;
+          padding: 3px 8px;
+        }
+      }
     }
-  }
-  a {
-    color: $header-name-color;
-    margin-right: 10px;
-  }
   }
 }
 
@@ -51,19 +56,18 @@ header {
   margin-top: 45px;
   text-decoration: none;
 
-  a.glyphicon-glyphicon-eye-open {
+  a.glyphicon.glyphicon-eye-open {
       color: $header-name-color;
     }
 }
 
+.row {
+
+}
 .title-link {
 
 }
 
-div.vote-btns {
-  display: inline-block;
-
-}
 
 .header {
   color: $header-name-color;

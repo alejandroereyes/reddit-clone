@@ -20,25 +20,32 @@
   </head>
   <body>
   <nav class="navbar navbar-default navbar-fixed-top"><div class="mini-logo"></div>
-  <div class="container">
-    <a href="/"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a>
-    <a href="/users" class="all-users">All Users</a>
-    <a href="/links/new" class="new-link">Add a Link</a>
-    <a href="/users/new" class="new_user>">
-      <button type="button" class="btn btn-default navbar-btn">Sign Up</button>
-    </a>
-    <a href="/login" class="log-in>">
-      <button type="button" class="btn btn-default navbar-btn">Log In</button>
-    </a>
-    <a href="/logout" class="log-out>">
-      <button type="button" class="btn btn-default navbar-btn">Log Out</button>
-    </a>
-    <%= link_to "Hello #{current_user.name}", "users/#{current_user.id}" if current_user %>
-    <!-- <a href="/users/new" class="new_user>">Sign Up</a> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 nav-links">
+        <a href="/"><span class="glyphicon glyphicon-eye-open top-link" aria-hidden="true"></span></a>
+        <a href="/users" class="all-users top-link">All Users</a>
+        <a href="/links/new" class="new-link top-link">Add a Link</a>
+      </div>
+      <div class='col-md-8 nav-btns'>
+        <a href="/users/new" class="btn new_user>">
+          <button type="button" class="btn btn-default navbar-btn">Sign Up</button>
+        </a>
+        <a href="/login" class="btn log-in>">
+          <button type="button" class="btn btn-default navbar-btn">Log In</button>
+        </a>
+        <a href="/logout" class="btn log-out>">
+          <button type="button" class="btn btn-default navbar-btn">Log Out</button>
+        </a>
+      </div>
+      <%= link_to "Hello #{current_user.name}", "users/#{current_user.id}" if current_user %>
+    </div>
   </div>
 </nav>
+<div class="row">
   <header><a href="/"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span></a><%= link_to 'readit', '/', class: 'header' %> </header>
+</div>
   <%= yield %>
-
+<footer></footer>
 </body>
 </html>

@@ -42,11 +42,11 @@ nav {
 
       .nav-btns {
       float: right;
-      transition: background-color 10s ease;
 
         .btn {
           float: right;
           padding: 3px 8px;
+          transition-duration: 0.5s;
 
           &:hover {
             border-radius: 0;
@@ -95,5 +95,15 @@ article {
 
 div.one-link {
   margin-bottom: 10px;
+}
+
+footer {
+  height: 60px;
+  text-align: center;
+  text-decoration: none;
+  background-color: $header-color;
+  color: $header-name-color;
+  font-size: 40px;
+  padding-top: 8px;
 }
 

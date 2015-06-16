@@ -1,9 +1,11 @@
-<div class="log-in-box">
-  <%= form_tag create_session_path do %>
-    <%= label_tag(:emal, "Email:") %>
-    <p><%= text_field_tag :email %></p>
-    <%= label_tag(:password, "Password") %>
-    <p><%= password_field_tag :password %></p>
-    <p><%= submit_tag "Submit" %></p>
-  <% end %>
+<div class="row">
+  <div class="log-in-box">
+    <%= form_tag create_session_path do %>
+      <%= label_tag(:emal, "Email:") %>
+      <p><%= text_field_tag :email %></p>
+      <%= label_tag(:password, "Password") %>
+      <p><%= password_field_tag :password %></p>
+      <p><%= submit_tag "Submit" %></p>
+    <% end %>
+  </div>
 </div>

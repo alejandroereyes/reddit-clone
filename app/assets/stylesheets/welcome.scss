@@ -2,31 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $time-color: #888888;
+article {
+  margin-bottom: 10px;
 
-.row.one-link {
-  padding: 5px 10px;
-  border-radius: 10px;
-  transition-duration: 2s;
-
-  &:hover {
+  .row.one-link {
+    padding: 5px 10px;
     border-radius: 10px;
-    background-color: lighten( $time-color, 40% );
-  }
+    transition-duration: 2s;
 
-  .row {
-
-    .col-sm-1 {
-      font-weight: bold;
+    &:hover {
+      border-radius: 10px;
+      background-color: lighten( $time-color, 40% );
     }
 
-    .col-sm-11 {
+    .row {
 
-      span.post-time {
-        color: $time-color;
-        font-size: 11px;
-        margin-left: 15px;
+      .col-sm-1 {
+        font-weight: bold;
+      }
+
+      .col-sm-11 {
+
+        span.post-time {
+          color: $time-color;
+          font-size: 11px;
+          margin-left: 15px;
+        }
       }
     }
-  }
 
+  }
 }

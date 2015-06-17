@@ -27,6 +27,20 @@
         <a href="/users" class="all-users top-link">All Users</a>
         <a href="/links/new" class="new-link top-link">Add a Link</a>
       </div>
+      <div class="btn-group">
+        <button type="button" class="btn dropdown">Boards</button>
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="caret"></span>
+          <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+        <% all_boards.each do |b| %>
+          <% cat = b.category %>
+          <% path = "boards/#{b.id}" %>
+          <li><a href=<%="#{path}"%>><%=cat%></a></li>
+          <% end %>
+        </ul>
+      </div>
       <div class='col-md-8 nav-btns'>
         <a href="/users/new" class="btn new_user>">
           <button type="button" class="btn btn-default navbar-btn">Sign Up</button>

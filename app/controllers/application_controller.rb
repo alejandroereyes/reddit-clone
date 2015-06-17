@@ -9,6 +9,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def all_boards
+    @all_boards = Board.all
+  end
+
+  helper_method :all_boards
+
   def authenticate_user!
     if current_user == nil
       redirect_to login_path, alert: "You must be logged in"

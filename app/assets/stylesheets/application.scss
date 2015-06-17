@@ -7,6 +7,8 @@ $header-color: #CCCC99;
 $link-color: #003366;
 $header-name-color: #333333;
 $time-color: #888888;
+$nav-color: #F8F8F8;
+$btn-border-color: #CCCCCC;
 
 $font: Courier;
 
@@ -31,6 +33,8 @@ nav {
       .nav-links {
         padding-top: 17px;
         float: left;
+
+
 
         span {
           font-size: 20px;
@@ -128,5 +132,15 @@ footer {
   color: $header-name-color;
   font-size: 15 px;
   padding-top: 8px;
+}
+
+.btn.dropdown {
+  background-color: $nav-color;
+  border: 1px solid $btn-border-color;
+}
+
+.btn.dropdown-toggle {
+  background-color: $nav-color;
+  border: 1px solid $btn-border-color;
 }
 

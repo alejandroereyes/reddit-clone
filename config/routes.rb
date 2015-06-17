@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get '/boards/links/:id', to: 'links#show'
+  get '/boards/users/:id', to: 'users#show'
   resources :boards
 
   # get 'links/users/:id', to: 'users/show'

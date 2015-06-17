@@ -1,0 +1,25 @@
+<% @board.links.each do |link| %>
+    <div class="row one-link">
+        <div class="row">
+            <div class"title">
+                <div class="col-sm-1">Title:</div>
+                <div class="col-sm-11">
+                    <%= link_to link.title.titleize, "links/#{link.id}", class: "erb-link" %>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">Post:</div>
+            <div class="col-sm-11">
+                <%= render partial: 'shared/link', locals: { link: link } %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1">Via:</div>
+            <div class="col-sm-11">
+                <%= link_to "#{link.user.name}", "users/#{link.user_id}" %><span class="post-time"><%= "Added on #{link.created_at.strftime("%b %-d %Y %I:%M%P")}" %></span>
+            </div>
+        </div>
+            <%= render partial: "shared/vote_btns", locals: { link: link, vote: @vote } %>
+    </div>
+    <% end %>

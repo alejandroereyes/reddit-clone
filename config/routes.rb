@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get '/boards/links/:id', to: 'links#show'
   get '/boards/users/:id', to: 'users#show'
+  get '/boards/boards/:id', to: 'boards#show'
   resources :boards
 
   # get 'links/users/:id', to: 'users/show'

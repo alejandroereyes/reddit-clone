@@ -1,4 +1,7 @@
 <article>
+    <div class="row board-name">
+        <h3><%= "#{@board.category.titleize} Links" %></h3>
+    </div>
     <% @board.links.each do |link| %>
         <div class="row one-link">
             <div class="row">

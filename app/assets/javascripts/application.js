@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function(){
+  firstLink = $('.one-link').first();
+  $('.row.board-name').on('click','h3', function(){
+    $(firstLink).toggleClass('highlight');
+  });
+
+}); //doc

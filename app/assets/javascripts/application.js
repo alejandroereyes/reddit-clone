@@ -17,9 +17,20 @@
 //= require_tree .
 
 $(document).ready(function(){
+
   firstLink = $('.one-link').first();
   $('.row.board-name').on('click','h3', function(){
     $(firstLink).toggleClass('highlight');
-  });
+  }); // click on boards name
+
+  counter = 0
+  $('header').on('click', function(){
+    counter += 1;
+    if (counter > 1) {
+      console.log("You clicked the header " + counter + " times.");
+    } else {
+      console.log("You clicked the header " + counter + " time.");
+    }
+  }); // click on header
 
 }); //doc
